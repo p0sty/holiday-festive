@@ -9,7 +9,7 @@ I couldn't find one in the defaults, so I added one :D
 
 Merry Christmas everyone :)
 
-I've done it in bash because it runs locally on the light (when ssh'd through developer mode) if you're on windows or easily remotely onlinux or os x as most have inbuilt python support.
+I've done it in bash because it runs locally on the light (when ssh'd through developer mode) and has few dependencies.
 
 usage is ./festive.sh holidayipaddress.
 
