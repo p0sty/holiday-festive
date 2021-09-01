@@ -35,7 +35,7 @@ file[9]="random10.json"
 #
 while (( 1 ))
 do 
-curl -X PUT -d @${file[$(shuf -i0-9 -n1)]} http://127.0.0.1/iotas/0.1/device/moorescloud.holiday/localhost/setlights
+curl -X PUT -d @${file[$(shuf -i0-9 -n1)]} http://192.168.1.205/iotas/0.1/device/moorescloud.holiday/localhost/setlights
 sleep 0.1
 done
 #curl -X PUT -d @${file[$(shuf -i0-9 -n1)]} http://127.0.0.1/iotas/0.1/device/moorescloud.holiday/localhost/setlights
