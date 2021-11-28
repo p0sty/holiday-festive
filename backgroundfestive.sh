@@ -1,4 +1,14 @@
 #!/bin/bash
+hostname=$1
+
+if [[ -z "$1" ]]
+then
+  echo "string is empty"
+  hostname="localhost"
+fi
+
+echo "hostname is $hostname"
+
 #
 # Do things rather quickly if we can
 # Better to keep things to 10 hz if possible, just because
@@ -8,10 +18,10 @@
 #
 while (( 1 ))
 do 
-curl -X PUT -d @festive1.json http://127.0.0.1/iotas/0.1/device/moorescloud.holiday/localhost/setlights
+curl -X PUT -d @festive1.json http://${hostname}/iotas/0.1/device/moorescloud.holiday/localhost/setlights
 sleep 0.1
-curl -X PUT -d @festive2.json http://127.0.0.1/iotas/0.1/device/moorescloud.holiday/localhost/setlights
+curl -X PUT -d @festive2.json http://${hostname}/iotas/0.1/device/moorescloud.holiday/localhost/setlights
 sleep 0.1
-curl -X PUT -d @festive3.json http://127.0.0.1/iotas/0.1/device/moorescloud.holiday/localhost/setlights
+curl -X PUT -d @festive3.json http://${hostname}/iotas/0.1/device/moorescloud.holiday/localhost/setlights
 sleep 0.1
 done

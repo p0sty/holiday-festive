@@ -64,7 +64,7 @@ class Blinkyapp(threading.Thread):
                 ln = ln+1            
 
                 self.holiday.render()       # Send the colours out
-            time.sleep(0.04)       # And finally, wait. was 0.2 - 0.15
+            time.sleep(0.02)       # And finally, wait. was 0.2 - 0.15
 
 # ZOMFG LET'S DO SOME TESTING
 #
