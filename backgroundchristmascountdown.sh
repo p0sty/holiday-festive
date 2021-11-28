@@ -28,10 +28,12 @@ TODAY=$(date +%j)
 DAYS=$(($XMAS - $TODAY))
 case $DAYS in
   0) delay=$mindelay;;
-  1) delay=$(bc -l <<< "$mindelay * 1.5");;
- [0-9]*) delay=$(bc -l <<< "$mindelay * $DAYS * $delaymultiplier");;
-  -[0-9]*) delay=$(bc -l <<< "$mindelay * $DAYS * $delaymultiplier * 2 * -1");;
+  1) delay=$(echo | awk -v mindelay="$mindelay" ' { printf "%0.5f\n", ( $mindelay * 1.5 ); } ');;
+ [0-9]*) delay=$(echo | awk -v mindelay="$mindelay" -v DAYS="$DAYS" -v delaymultiplier="$delaymultiplier"  ' { printf "%0.5f\n", ( mindelay * DAYS * delaymultiplier ); } ');;
+  -[0-9]*) delay=$(echo | awk -v mindelay="$mindelay" -v DAYS="$DAYS" -v delaymultiplier="$delaymultiplier"  ' { printf "%0.5f\n", ( mindelay * DAYS * delaymultiplier * 2 * -1 ); } ');;
 esac
+#awk example
+#echo | awk ' { printf "%0.3f\n", (1 / 2); } '
 #debug
 #echo "minimum delay is $mindelay"
 echo "current delay is $delay"
