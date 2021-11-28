@@ -15,7 +15,7 @@ usage is ./festive.sh holidayipaddress.
 
 NEW in 2021:
 added start-christmascountdown.sh - 30 days from christmas the animation will get faster closer to christmas, then wind down to new years
-can run directly on the holiday or on another bash supported device - if no host is specified it assumes localhost
+can run directly on the holiday or on another bash supported device - if no host is specified it assumes it's running locally
 usage ./start-christmascountdown.sh holidayIPaddress
 
 NEW in 2017:
