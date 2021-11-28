@@ -13,6 +13,11 @@ I've done it in bash because it runs locally on the light (when ssh'd through de
 
 usage is ./festive.sh holidayipaddress.
 
+NEW in 2021:
+added start-christmascountdown.sh - 30 days from christmas the animation will get faster closer to christmas, then wind down to new years
+can run directly on the holiday or on another bash supported device - if no host is specified it assumes localhost
+usage ./start-christmascountdown.sh holidayIPaddress
+
 NEW in 2017:
 Added the ability to close your ssh window.
 
