@@ -1,0 +1,2 @@
+# at 9am every day in December - start the festivities!
+0 9 * 12 * holiday /home/holiday/holiday-festive/start-christmascountdown.sh

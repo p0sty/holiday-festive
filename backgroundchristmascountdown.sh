@@ -1,6 +1,10 @@
 #!/bin/bash
 hostname=$1
 
+script_home="/home/holiday/holiday-festive"
+
+cd $script_home
+
 if [[ -z "$1" ]]
 then
   echo "hostname is empty - defaulting localhost - assuming running localy on holiday"
